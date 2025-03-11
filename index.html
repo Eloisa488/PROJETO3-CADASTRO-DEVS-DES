@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalhando Com Formulários</title>
+  <script src="./index.js" defer></script>
+</head>
+<body>
+  <h1>CADASTRO DE DEVS</h1>
+  <hr>
+<H2>Inscreva-se!</H2>
+
+  <form id="orderForm">
+    <label for="name">Nome:</label>
+    <br>
+    <input type="text" name="name" id="name">
+    <br><br>
+    
+    
+    <form action="/submit-tecnologia" method="post">
+        <label for="adicionar-nova-tecnologia">adicionar nova tecnologia:</label><br>
+        <input type="text" id="adicionar-nova-tecnologia" name="adicionar-nova-tecnologia" required><br><br>
+        <h2>Tempo de experiencia</h2>
+        
+        <form>
+          <input type="radio" id="0-2" name="fav_language" value="0-2">
+          <label for="0-2">0-2 anos</label><br>
+          <input type="radio" id="css" name="fav_language" value="CSS">
+          <label for="css">3-4 anos</label><br>
+          <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+          <label for="javascript">5+ anos</label><br>
+          <br>
+          
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <title>Remover Linha e Adicionar Inputs</title>
+              <style>
+                  table, th, td {
+                      border: 1px solid black;
+                      border-collapse: collapse;
+                      padding: 8px;
+                  }
+                  button {
+                      background-color: red;
+                      color: white;
+                      border: none;
+                      cursor: pointer;
+                  }
+              </style>
+          </head>
+          <body>
+              <table id="minhaTabela">
+                  <tr>
+                      <td>Linha 1</td>
+                      <td><button onclick="removerLinha(this)">Remover</button></td>
+                  </tr>
+                  <tr>
+                      <td>Linha 2</td>
+                      <td><button onclick="removerLinha(this)">Remover</button></td>
+                  </tr>
+                  <tr>
+                      <td>Linha 3</td>
+                      <td><button onclick="removerLinha(this)">Remover</button></td>
+                  </tr>
+              </table>
+          
+              <form id="meuFormulario">
+                  <div>
+                      <input type="text" name="input1" placeholder="Novo Input 1">
+                      <input type="text" name="input2" placeholder="Novo Input 2">
+                  </div>
+              </form>
+          
+              <script>
+                  function removerLinha(botao) {
+                      var linha = botao.parentNode.parentNode;
+                      linha.parentNode.removeChild(linha);
+                      adicionarNovaLinha();
+                  }
+          
+                  function adicionarNovaLinha() {
+                      var formulario = document.getElementById('meuFormulario');
+                      var novaDiv = document.createElement('div');
+                      var input1 = document.createElement('input');
+                      var input2 = document.createElement('input');
+          
+                      input1.type = 'text';
+                      input1.name = 'input1';
+                      input1.placeholder = 'Novo Input 1';
+          
+                      input2.type = 'text';
+                      input2.name = 'input2';
+                      input2.placeholder = 'Novo Input 2';
+          
+                      novaDiv.appendChild(input1);
+                      novaDiv.appendChild(input2);
+
+                  }
+              </script>
+          </body>
+          </html>
+          
+   
+        
+          
+     
+        <input type="submit" value="Enviar">
+    </form>
+
+  
+</body>
+</html>
